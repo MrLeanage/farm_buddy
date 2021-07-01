@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "103343310932",
+    "project_id": "farmbuddy-2021",
+    "storage_bucket": "farmbuddy-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103343310932:android:0d077b1b3e13b3240645c1",
+        "android_client_info": {
+          "package_name": "com.app.farm_buddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103343310932-6bdt3305mvbaeggae42gp34o534nbbk0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.farm_buddy",
+            "certificate_hash": "ecd235258bba7cb337918fcf372dd4afcdb20a1e"
+          }
+        },
+        {
+          "client_id": "103343310932-aok8aet2ap07iclc78ojto7l66eserbq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTDFb0kAHHrfrPoiAytTohrkupETXyxkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103343310932-aok8aet2ap07iclc78ojto7l66eserbq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
