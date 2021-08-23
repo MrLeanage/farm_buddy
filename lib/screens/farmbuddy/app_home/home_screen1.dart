@@ -1,7 +1,9 @@
-import 'package:farm_buddy/screens/common/components/border_box.dart';
-import 'package:farm_buddy/services/auth.dart';
+
+import 'package:farm_buddy/services/authenticate_service.dart';
 import 'package:farm_buddy/utils/constants.dart';
-import 'package:farm_buddy/utils/widget_functions.dart';
+import '../../../utils/custom_widgets/snackBar_widget.dart';
+import 'package:farm_buddy/utils/custom_widgets/addSpace_widget.dart';
+import 'package:farm_buddy/utils/custom_widgets/border_box.dart';
 import 'package:flutter/material.dart';
 
 

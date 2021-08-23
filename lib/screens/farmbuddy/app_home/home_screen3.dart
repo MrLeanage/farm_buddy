@@ -1,15 +1,16 @@
+import 'package:connectivity/connectivity.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:farm_buddy/screens/common/components/base_widget.dart';
-import 'package:farm_buddy/screens/common/components/border_box.dart';
-import 'package:farm_buddy/screens/common/components/side_bar.dart';
-import 'package:farm_buddy/screens/common/popups/dialogs.dart';
 import 'package:farm_buddy/screens/farmbuddy/encyclopaedia/encyclopaedia.dart';
 import 'package:farm_buddy/screens/farmbuddy/project/project.dart';
 import 'package:farm_buddy/screens/farmbuddy/settings/settings.dart';
 import 'package:farm_buddy/screens/farmbuddy/shop/shop.dart';
-import 'package:farm_buddy/services/auth.dart';
+import 'package:farm_buddy/services/authenticate_service.dart';
 import 'package:farm_buddy/utils/constants.dart';
-import 'package:farm_buddy/utils/widget_functions.dart';
+import 'package:farm_buddy/utils/custom_widgets/addSpace_widget.dart';
+import 'package:farm_buddy/utils/custom_widgets/base_widget.dart';
+import 'package:farm_buddy/utils/custom_widgets/sidebar_widget.dart';
+import 'package:farm_buddy/utils/popups/dialogs.dart';
+import 'package:farm_buddy/utils/utility.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
@@ -33,7 +34,6 @@ class _HomeScreenState extends State<HomeScreen> {
     Shop(),
     Project(),
     Encyclopaedia()
-
   ];
 
   @override
@@ -128,7 +128,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: <Widget>[
                           ElevatedButton(
                             onPressed: () async {
-
+                              final result = await Connectivity().checkConnectivity();
+                              Utility.showConnectivitySnackBar(result, context);
 
                             },
                             child: Text(
@@ -166,5 +167,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
 }
 

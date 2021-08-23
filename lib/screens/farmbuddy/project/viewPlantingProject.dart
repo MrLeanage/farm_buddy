@@ -1,17 +1,16 @@
+import 'package:farm_buddy/screens/authenticate/login_screen.dart';
 import 'package:farm_buddy/services/authenticate_service.dart';
 import 'package:farm_buddy/utils/constants.dart';
-import '../../utils/custom_widgets/snackBar_widget.dart';
 import 'package:farm_buddy/utils/custom_widgets/addSpace_widget.dart';
 import 'package:flutter/material.dart';
-import 'login_screen.dart';
 
-class SignupScreen extends StatefulWidget {
+class ViewPlantingProject extends StatefulWidget {
   static const routeName = '/signup';
   @override
-  _SignupScreenState createState() => _SignupScreenState();
+  _ViewPlantingProjectState createState() => _ViewPlantingProjectState();
 }
 
-class _SignupScreenState extends State<SignupScreen> {
+class _ViewPlantingProjectState extends State<ViewPlantingProject> {
 
   final GlobalKey<FormState> _formKey = GlobalKey();
   final AuthService _authService = AuthService();
@@ -36,6 +35,14 @@ class _SignupScreenState extends State<SignupScreen> {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.of(context).pop(true),
+
+        ),
+        title: Text("My Planting Project"),
+      ),
       body: Stack(
         children: <Widget>[
           Container(

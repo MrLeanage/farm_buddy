@@ -7,12 +7,14 @@ const COLOR_GREY = Color.fromRGBO(73,72,68,1);
 const COLOR_WHITE = Color.fromRGBO(255,255,255,1);
 const COLOR_RED = Color.fromRGBO(255,0,0,1);
 const COLOR_BROWN = Color.fromRGBO(65, 27, 12, 1);
+const COLOR_BACKGROUND = Color.fromRGBO(2, 75, 41, 1);
+const COLOR_LIGHT_GREEN = Colors.green;
 
 const TextTheme TEXT_THEME_DEFAULT = TextTheme(
   headline1: TextStyle(
     color: COLOR_BLACK, fontWeight: FontWeight.w700, fontSize: 26),
   headline2: TextStyle(
-      color: COLOR_BLACK, fontWeight: FontWeight.w700, fontSize: 22),
+      color: COLOR_GREEN, fontWeight: FontWeight.w700, fontSize: 22),
   headline3: TextStyle(
       color: COLOR_BLACK, fontWeight: FontWeight.w700, fontSize: 20),
   headline4: TextStyle(
@@ -40,7 +42,7 @@ const TextTheme TEXT_THEME_SMALL = TextTheme(
   headline1: TextStyle(
       color: COLOR_BLACK, fontWeight: FontWeight.w700, fontSize: 22),
   headline2: TextStyle(
-      color: COLOR_BLACK, fontWeight: FontWeight.w700, fontSize: 20),
+      color: COLOR_GREEN, fontWeight: FontWeight.w700, fontSize: 20),
   headline3: TextStyle(
       color: COLOR_BLACK, fontWeight: FontWeight.w700, fontSize: 18),
   headline4: TextStyle(

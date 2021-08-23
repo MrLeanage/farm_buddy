@@ -1,14 +1,17 @@
-import 'package:farm_buddy/screens/common/popups/dialogs.dart';
-import 'package:farm_buddy/screens/farmbuddy/app_home/home_screen.dart';
+
+import 'package:farm_buddy/screens/farmbuddy/app_home/app_base.dart';
 import 'package:farm_buddy/screens/farmbuddy/encyclopaedia/encyclopaedia.dart';
 import 'package:farm_buddy/screens/farmbuddy/project/project.dart';
 import 'package:farm_buddy/screens/farmbuddy/settings/settings.dart';
 import 'package:farm_buddy/screens/farmbuddy/shop/shop.dart';
-import 'package:farm_buddy/services/auth.dart';
+import 'package:farm_buddy/services/authenticate_service.dart';
 import 'package:farm_buddy/utils/constants.dart';
-import 'package:farm_buddy/utils/widget_functions.dart';
+import 'snackBar_widget.dart';
+import 'package:farm_buddy/utils/popups/dialogs.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+
+import 'addSpace_widget.dart';
 
 // ignore: must_be_immutable
 class SideBar extends StatelessWidget {

@@ -1,9 +1,12 @@
-import 'package:farm_buddy/screens/common/components/base_widget.dart';
+
 import 'package:farm_buddy/utils/constants.dart';
-import 'package:farm_buddy/utils/widget_functions.dart';
+import 'snackBar_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+
+import 'addSpace_widget.dart';
+import 'base_widget.dart';
 
 class SplashScreen extends StatelessWidget{
   @override

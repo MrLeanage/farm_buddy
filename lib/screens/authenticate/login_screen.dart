@@ -1,12 +1,13 @@
 import 'package:farm_buddy/utils/constants.dart';
-import 'package:farm_buddy/utils/widget_functions.dart';
+import '../../utils/custom_widgets/snackBar_widget.dart';
+import 'package:farm_buddy/utils/custom_widgets/addSpace_widget.dart';
 
-import '../farmbuddy/app_home/home_screen.dart';
-import 'package:farm_buddy/screens/shared/loader.dart';
-import 'package:farm_buddy/services/auth.dart';
+import '../farmbuddy/app_home/app_base.dart';
+import '../../utils/custom_widgets/loader_widget.dart';
+import 'package:farm_buddy/services/authenticate_service.dart';
 import 'package:flutter/material.dart';
 import 'signup_screen.dart';
-import '../farmbuddy/app_home/home_screen.dart';
+import '../farmbuddy/app_home/app_base.dart';
 
 class LoginScreen extends StatefulWidget {
   static const routeName = '/login';

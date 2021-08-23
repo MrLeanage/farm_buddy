@@ -1,7 +1,7 @@
 import 'package:farm_buddy/main.dart';
 import 'package:farm_buddy/model/userDetail.dart';
 import 'package:farm_buddy/screens/authenticate/authenticate.dart';
-import 'farmbuddy/app_home/home_screen.dart';
+import 'farmbuddy/app_home/app_base.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe

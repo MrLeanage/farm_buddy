@@ -15,6 +15,4 @@ class _AuthenticateState extends State<Authenticate> {
       child: LoginScreen()
     );
   }
-
-
 }

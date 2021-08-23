@@ -4,12 +4,12 @@ class AuthService{
 
   final FirebaseAuth firebaseAuth = FirebaseAuth.instance;
 //create User obj based on firebase user
-  User? userFromFriebaseUser(User? user){
+  User? userFromFirebaseUser(User? user){
     return user != null ?  user : null;
   }
   //auth change user stream
   Stream<User?> get user{
-    print(userFromFriebaseUser);
+    print(userFromFirebaseUser);
     return firebaseAuth.authStateChanges();
   }
 
@@ -17,15 +17,15 @@ class AuthService{
   Future signInAnon() async{
 
     try{
-      UserCredential credentialresult = await firebaseAuth.signInAnonymously();
-      User? user = credentialresult.user;
-      return userFromFriebaseUser(user);
+      UserCredential credentialResult = await firebaseAuth.signInAnonymously();
+      User? user = credentialResult.user;
+      return userFromFirebaseUser(user);
     }catch( exception){
       print(exception.toString());
       return null;
     }
   }
-
+///////////////////
   //sign in with email and password
   Future signInWithEmailAndPassword(String email, String password) async {
     print('email is :'+email);
@@ -33,7 +33,7 @@ class AuthService{
     try{
       UserCredential userCredential = await firebaseAuth.signInWithEmailAndPassword(email: email, password: password);
       User? user = userCredential.user;
-      return userFromFriebaseUser(user);
+      return userFromFirebaseUser(user);
     }catch(exception){
       print(exception.toString());
       return exception;
@@ -47,7 +47,7 @@ class AuthService{
     try{
       UserCredential userCredential = await firebaseAuth.createUserWithEmailAndPassword(email: email, password: password);
       User? user = userCredential.user;
-      return userFromFriebaseUser(user);
+      return userFromFirebaseUser(user);
     }catch(exception){
       print(exception.toString());
       return exception;
