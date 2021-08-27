@@ -3,7 +3,7 @@ import * as utility from '../utils/Utility'
 //import * as rainPredictionReport from '../prediction/RainPredictionReport';
 // const axios = require('axios');
 
-export const onRequestWeather = functions.https.onRequest(
+export const onRequestWeather1 = functions.https.onRequest(
     (request, response) => {
         const requestData = request.body;
         if(requestData?.longitude && requestData?.latitude){

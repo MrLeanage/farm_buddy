@@ -1,7 +1,7 @@
 import * as functions from 'firebase-functions';
 import * as admin from "firebase-admin";
 
-export const onRequestAllCropList = functions.https.onRequest(
+export const onAPITest = functions.https.onRequest(
     (request, response) => {
         const cropList: {}[] = [];
 

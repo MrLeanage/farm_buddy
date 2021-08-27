@@ -1,7 +1,7 @@
 import * as functions from 'firebase-functions';
 import * as admin from "firebase-admin";
-import * as utility from '../utils/utility';
-import * as rainPredictionReport from '../prediction/RainPredictionReport';
+import * as utility from '../utils/Utility';
+import * as rainPredictionReport from '../model/weather/RainPredictionReport';
 
 export const onRequestViableCropList = functions.https.onRequest(
     (request, response) => {

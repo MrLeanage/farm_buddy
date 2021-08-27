@@ -1,0 +1,11 @@
+{
+  "pesticide": {
+    "P001": {
+      "pID": "P001",
+      "pName": "Neem Oil",
+      "description": "Neem oil, also known as margosa oil, is a vegetable oil pressed from the fruits and seeds of the neem",
+      "precaution": "Organic Pesticide - No Harm",
+      "method": "Add 50ml of Neem oil to 1 Litre of water and spray to affected areas"
+    }
+  }
+}

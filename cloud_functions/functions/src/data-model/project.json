@@ -1,0 +1,127 @@
+{
+  "projectId": "PROJECT_1",
+  "uuid": "EG9TZ2vRryV7opx3nfKruC0fJFo1",
+  "name": "Chile Bed",
+  "startDate": "30-7-2021",
+  "endDate": "30-8-2021",
+  "cropInfo": {
+    "cropId": "CHILI",
+    "name": "Chile",
+    "imageURL": "https://www.firebase-bucket.com",
+    "description": "This is a test description on chile",
+    "lifeSpan": "80-150"
+  },
+  "lastUpdatedOn": "30-7-2021",
+  "stage1": {
+    "completed": false,
+    "name": "Seeding Stage",
+    "dailyWater": "250 mm",
+    "stageLifeSpan": 30,
+    "fertilizerList": [
+      {
+        "name": "ABCD Fertilizer",
+        "instructions": [
+          "Step 1",
+          "Step 2"
+        ]
+      }
+    ],
+    "seedlingQuestionList": [
+      {
+        "question": "Question 1",
+        "answer": false
+      }
+    ],
+    "diseaseQuestionList": [
+      {
+        "question": "Question 1",
+        "answer": false
+      }
+    ]
+  },
+  "stage2": {
+    "completed": false,
+    "name": "Germination Stage",
+    "dailyWater": "250 mm",
+    "stageLifeSpan": 30,
+    "vegetatingSpan": 20,
+    "floweringSpan": 10,
+    "fertilizerList": [
+      {
+        "name": "ABCD Fertilizer",
+        "instructions": [
+          "Step 1",
+          "Step 2"
+        ]
+      }
+    ],
+    "vegetatingQuestionList": [
+      {
+        "question": "Question 1",
+        "answer": false
+      }
+    ],
+    "floweringQuestionList": [
+      {
+        "question": "Question 1",
+        "answer": false
+      }
+    ],
+    "diseaseQuestionList": [
+      {
+        "question": "Question 1",
+        "answer": false
+      }
+    ]
+  },
+  "stage3": {
+    "completed": false,
+    "name": "Harvesting Stage",
+    "dailyWater": "250 mm",
+    "stageLifeSpan": 30,
+    "ripeningSpan": 20,
+    "harvestingSpan": 10,
+    "fertilizerList": [
+      {
+        "name": "ABCD Fertilizer",
+        "instructions": [
+          "Step 1",
+          "Step 2"
+        ]
+      }
+    ],
+    "ripeningQuestionList": [
+      {
+        "question": "Question 1",
+        "answer": false
+      }
+    ],
+    "harvestingQuestionList": [
+      {
+        "question": "Question 1",
+        "answer": false
+      }
+    ],
+    "diseaseQuestionList": [
+      {
+        "question": "Question 1",
+        "answer": false
+      }
+    ]
+  },
+  "stage4": {
+    "completed": false,
+    "name": "Decomposing Stage",
+    "stageLifeSpan": 30,
+    "decomposeQuestionList": [
+      {
+        "question": "Question 1",
+        "answer": false
+      }
+    ],
+    "decomposeGuideList": [
+      "Guide 1",
+      "Guide 2"
+    ]
+  }
+}

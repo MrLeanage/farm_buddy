@@ -1,0 +1,10 @@
+{
+  "organic_fertilizer": {
+    "OF001": {
+      "oFID": "OF001",
+      "ofName": "Organic Compost Manure",
+      "preparation": "Prepare a mixture of grass leaves, rice husk, half decayed plant leaves and cover it from a any polythene cover that avoid falling of sunlight to dump for 14 days",
+      "apply": "Apply prepared mixture to cover the Lower area of the shoot system"
+    }
+  }
+}

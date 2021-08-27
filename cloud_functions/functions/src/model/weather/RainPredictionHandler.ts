@@ -1,6 +1,6 @@
 import {Rain} from "./Rain";
 
-export class RainPrediction {
+export class RainPredictionHandler {
     _duration: string = "";
     _dayCounter: number = 0;
     _possibleRainyDays: number = 0;

@@ -1,6 +1,6 @@
-import * as utility from "../utils/utility";
-import {Rain} from "../model/Rain";
-import {RainPrediction} from "../model/RainPrediction";
+import * as utility from "../../utils/Utility";
+import {Rain} from "./Rain";
+import {RainPredictionHandler} from "./RainPredictionHandler";
 
 export function rainPredictionForPlantSelection(longitudes: string, latitudes: string, duration: number): Promise<any> {
     return new Promise<any>((resolve, reject) => {
@@ -14,7 +14,7 @@ export function rainPredictionForPlantSelection(longitudes: string, latitudes: s
                     rainDataList.push(rain)
                 });
 
-                const rainPrediction: RainPrediction = new RainPrediction(rainDataList);
+                const rainPrediction: RainPredictionHandler = new RainPredictionHandler(rainDataList);
                 const rainPredictionReport = {
                     duration: rainPrediction.duration,
                     test: 'testValues',

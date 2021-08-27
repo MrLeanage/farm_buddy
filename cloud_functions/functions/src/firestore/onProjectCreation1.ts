@@ -1,7 +1,7 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
 
-export const onProjectCreation = functions.firestore.document('projects/{projectId}').onCreate((snap, context) => {
+export const onProjectCreation1 = functions.firestore.document('projects/{projectID}').onCreate((snap, context) => {
     return new Promise<void>((resolve, reject) => {
         const projectId = context.params.projectId;
         const db = admin.firestore();

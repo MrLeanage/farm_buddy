@@ -1,0 +1,25 @@
+{
+  "disease": {
+    "D0001": {
+      "dID": "D0001,",
+      "dName": "Leaf Curl Complex (LLC)",
+      "symptoms": [
+        "Dry Leave surface",
+        "Start to roll leave edges",
+        "More insect damage on leaves and crop"
+      ],
+      "affect": [
+        "Reduce Significant amount of yield",
+        "Stunt of growth"
+      ],
+      "solutions": [
+        "Bagging and binning any affected leaves or fruit",
+        "Clean Leaves with lemon water",
+        "Prepare a solution with neem oil with water on 5:100 basis. Apply some soap powder to same solution if not solved"
+      ],
+      "pesticides": [
+        "p001"
+      ]
+    }
+  }
+}

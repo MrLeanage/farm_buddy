@@ -1,0 +1,76 @@
+{
+  "shops": {
+    "SH0001": {
+      "name": "Vegetable Seed Center - Gannoruwa",
+      "city": "Peradeniya",
+      "province": "Central Province",
+      "status": true,
+      "contact": {
+        "contact_name": "Ms S. H. I. U Gunawardhane",
+        "position": "AI",
+        "land_phone": "+94 81 2388221",
+        "mobile_phone": "+94 71 7904972"
+      }
+    },
+    "SH0002": {
+      "name": "Alevi Piyasa - Gannoruwa",
+      "city": "Peradeniya",
+      "province": "Central Province",
+      "status": true,
+      "contact": {
+        "contact_name": "",
+        "position": "AI",
+        "land_phone": "+94 81 2069339",
+        "mobile_phone": "+94 77 9851118"
+      }
+    },
+    "SH0003": {
+      "name": "Seeds and Planting Material Sales Center - Kundasale",
+      "city": "Kandy",
+      "province": "Central Province",
+      "status": true,
+      "contact": {
+        "contact_name": "Ms H. A. S. N Hapuarachchi",
+        "position": "AI",
+        "land_phone": "+94 81 2424592",
+        "mobile_phone": "+94 71 5671728"
+      }
+    },
+    "SH0004": {
+      "name": "Vegetable Seed Center - Colombo -05",
+      "city": "Colombo",
+      "province": "Western Province",
+      "status": true,
+      "contact": {
+        "contact_name": "Ms B. M  Rathnabharathi",
+        "position": "AI",
+        "land_phone": "+94 11 2368829",
+        "mobile_phone": "+94 71 4446295"
+      }
+    },
+    "SH0005": {
+      "name": "Vegetable Seed Center - Colombo - 07",
+      "city": "Colombo",
+      "province": "Western Province",
+      "status": true,
+      "contact": {
+        "contact_name": "Ms Y. M. N. N. K Yapa",
+        "position": "AI",
+        "land_phone": "+94 81 2696547",
+        "mobile_phone": "+94 71 8089354"
+      }
+    },
+    "SH0006": {
+      "name": "Vegetable Seed Center - Battaramulla",
+      "city": "Colombo",
+      "province": "Western Province",
+      "status": true,
+      "contact": {
+        "contact_name": "Mr S. H Priyadarshana",
+        "position": "AI",
+        "land_phone": "+94 81 2862397",
+        "mobile_phone": "+94 71 7904972"
+      }
+    }
+  }
+}

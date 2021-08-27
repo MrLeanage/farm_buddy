@@ -1,0 +1,295 @@
+{
+  "crops": {
+    "C001": {
+      "cropID": "C001",
+      "name": "Chile: MI -1 (Tall Variety)",
+      "imageURL": "https://firebasestorage.googleapis.com/v0/b/farmbuddy-2021.appspot.com/o/MI-1.jpg?alt=media&token=5062fb8d-bc17-45ed-aa36-5871e2e5d874",
+      "description": "A tall variety with an erect growth habit which attains a height of 75 - 100 cm, depending on the soil type. It is more suitable for cultivation during the maha season in rainfed uplands, but it is susceptible to leaf curl complex (LCC) and anthracnose, and therefore, gives comparatively low yields of about 1000 - 2000 kg ha-1 of dry chillies. The pods have a moderate pungency and are green becoming red coloured when ripe. The fruit surface is weakly wrinkled; the calyx is enveloping and the fruit ends are acute and strongly tapered.",
+      "diseaseList": [
+        {
+          "diseaseID" : "D0001",
+          "diseaseName": "Leaf Curl Complex (LLC)"
+        }
+      ],
+      "lifeSpan": "120-150",
+      "plantingStateList": [
+        "western",
+        "north-western"
+      ],
+      "seasonList": [
+        "Yala",
+        "Maha"
+      ],
+      "placeSelection": {
+        "pSID": "OUTDOOR_CONTAINER",
+        "pSName": "Outdoor Container Method"
+      },
+      "stage1": {
+        "sID": "seeding_stage",
+        "name": "Seeding Stage",
+        "dailyWater": "250 mm",
+        "stageLifeSpan": 15,
+        "fertilizerList": [
+          {
+            "fID": "OF001",
+            "name": "Organic Compost Manure",
+            "preparation": "Prepare a mixture of grass leaves, rice husk, half decayed plant leaves and cover it from a any polythene cover that avoid falling of sunlight to dump for 14 days",
+            "apply": "Apply prepared mixture to cover the Lower area of the shoot system"
+          }
+        ],
+        "growthQuestionList": [
+          {
+            "question": "Can you see new little branch stem coming out of the soil?",
+            "moveCount": 1,
+            "important": true
+          },
+          {
+            "question": "Can you see first pair of leaves from the shoot?",
+            "moveCount": 1,
+            "important": true
+          },
+          {
+            "question": "Can you see tender leaf?",
+            "moveCount": 1,
+            "important": true
+          },
+          {
+            "question": "Are Leaves growing larger?",
+            "moveCount": 1,
+            "important": true
+          },
+          {
+            "question": "Can yo see stem gets stronger and more woody.?",
+            "moveCount": 3,
+            "important": true
+          },
+          {
+            "question": "Can you see 4 leaves from the shoot?",
+            "moveCount": 1,
+            "important": true
+          },
+          {
+            "question": "Can you see leaves looks waxy?",
+            "moveCount": 1,
+            "important": true
+          }
+
+
+        ],
+        "diseaseQuestionList": [
+          {
+            "question": "Can you see curl leaves?",
+            "moveCount": 1,
+            "important": true
+          }
+        ]
+      },
+      "stage2": {
+        "sID": "germination_stage",
+        "name": "Germination Stage",
+        "dailyWater": "250 mm",
+        "stageLifeSpan": 30,
+        "fertilizerList": [
+          {
+            "fID": "OF001",
+            "name": "Organic Compost Manure",
+            "preparation": "Prepare a mixture of grass leaves, rice husk, half decayed plant leaves and cover it from a any polythene cover that avoid falling of sunlight to dump for 14 days",
+            "apply": "Apply prepared mixture to cover the Lower area of the shoot system"
+          }
+        ],
+        "growthQuestionList": [
+          {
+            "question": "Can you see more buds appear from the shoot?",
+            "moveCount": 2,
+            "important": true
+          },
+          {
+            "question": "Can you see leaves turn to dark green?",
+            "moveCount": 2,
+            "important": true
+          },
+          {
+            "question": "Can you see branches got more stronger?",
+            "moveCount": 2,
+            "important": true
+          },
+          {
+            "question": "Can you see 8 leaves from the shoot?",
+            "moveCount": 2,
+            "important": true
+          },
+          {
+            "question": "Is shoot got branched and bushy?",
+            "moveCount": 1,
+            "important": true
+          },
+          {
+            "question": "Can you see buds start open to flower?",
+            "moveCount": 4,
+            "important": true
+          },
+          {
+            "question": "Can you see 15 leaves from the shoot?",
+            "moveCount": 2,
+            "important": true
+          },
+          {
+            "question": "Can you see flowers with white petals?",
+            "moveCount": 4,
+            "important": true
+          },
+          {
+            "question": "Can you see first fruit in light green color?",
+            "moveCount": 4,
+            "important": true
+          },
+          {
+            "question": "Can you see 5 branches from the shoot?",
+            "moveCount": 2,
+            "important": true
+          },
+          {
+            "question": "Can you see three (3) fruit in light green color?",
+            "moveCount": 3,
+            "important": true
+          },
+          {
+            "question": "Can you see more flowers with white petals?",
+            "moveCount": 3,
+            "important": true
+          },
+          {
+            "question": "Can you see fruits growing tall?",
+            "moveCount": 1,
+            "important": true
+          },
+          {
+            "question": "Can you see fruits turning light green to dark green?",
+            "moveCount": 3,
+            "important": true
+          },
+          {
+            "question": "Can you see fruits turning full dark green?",
+            "moveCount": 3,
+            "important": true
+          }
+
+        ],
+        "diseaseQuestionList": [
+          {
+            "question": "Can you see curl leaves?",
+            "moveCount": 1,
+            "important": true
+          }
+        ]
+      },
+      "stage3": {
+        "sID": "harvesting_stage",
+        "name": "Harvesting Stage",
+        "dailyWater": "250 mm",
+        "stageLifeSpan": 45,
+        "fertilizerList": [
+          {
+            "fID": "OF001",
+            "name": "Organic Compost Manure",
+            "preparation": "Prepare a mixture of grass leaves, rice husk, half decayed plant leaves and cover it from a any polythene cover that avoid falling of sunlight to dump for 14 days",
+            "apply": "Apply prepared mixture to cover the Lower area of the shoot system"
+          }
+        ],
+        "growthQuestionList": [
+          {
+            "question": "Can you see fruit's  stalk turning stronger? If so, You can start harvest them using a scissor",
+            "moveCount": 3,
+            "important": true
+          },
+          {
+            "question": "Can you see more flowers?",
+            "moveCount": 3,
+            "important": true
+          },
+          {
+            "question": "Can you see more more fruits growing tall?",
+            "moveCount": 3,
+            "important": true
+          },
+          {
+            "question": "Can you see more chilies with hard and stronger stalk?? Time to harvest them",
+            "moveCount": 3,
+            "important": true
+          },
+          {
+            "question": "Can you see more chilies turned to reddish color?? Time to harvest them",
+            "moveCount": 3,
+            "important": true
+          },
+          {
+            "question": "Have the rate of flower occurrence got slow?",
+            "moveCount": 3,
+            "important": true
+          }
+
+        ],
+        "diseaseQuestionList": [
+          {
+            "question": "Can you see curl leaves?",
+            "moveCount": 1,
+            "important": true
+          }
+        ]
+      },
+      "stage4": {
+        "sID": "decomposing_stage",
+        "name": "Decomposing Stage",
+        "dailyWater": "100 mm",
+        "stageLifeSpan": 30,
+        "fertilizerList": [
+          {
+            "fID": "OF001",
+            "name": "Organic Compost Manure",
+            "preparation": "Prepare a mixture of grass leaves, rice husk, half decayed plant leaves and cover it from a any polythene cover that avoid falling of sunlight to dump for 14 days",
+            "apply": "Apply prepared mixture to cover the Lower area of the shoot system Reduce the quantity you applied than in previous stages"
+          }
+        ],
+        "growthQuestionList": [
+          {
+            "question": "Are leaves start to turn yellowish?",
+            "moveCount": 3,
+            "important": true
+          },
+          {
+            "question": "Are there fruits left to be harvested?",
+            "moveCount": 3,
+            "important": true
+          },
+          {
+            "question": "Can you see more leaves turn to yellowish?",
+            "moveCount": 3,
+            "important": true
+          },
+          {
+            "question": "Can you see more perfect chilies on the tree? ",
+            "moveCount": 2,
+            "important": true
+          },
+          {
+            "question": "Have you finished harvesting all perfectly grown chilies? ",
+            "moveCount": 1,
+            "important": true
+          },
+          {
+            "question": "Can you see more Yellowish Leaves? Cut the plant, let to dry and burn",
+            "moveCount": 1,
+            "important": true
+          }
+        ],
+        "diseaseQuestionList": [
+          {
+            "question": "Can you see curl leaves?",
+            "moveCount": 1,
+            "important": true
+          }
+        ]
+      }
+    }
+  }
+}
