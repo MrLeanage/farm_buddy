@@ -83,7 +83,7 @@ class _ShopScreenState extends State<ShopScreen> with SingleTickerProviderStateM
                           height: size.height*0.61,
                           child: Center(
                             child: isLoading?
-                            CircularProgressIndicator() :Container(
+                            Center(child: CircularProgressIndicator(color: COLOR_GREEN,)) :Container(
                               color: COLOR_WHITE,
                               width: size.width*0.9,
                               height: size.height*0.65,

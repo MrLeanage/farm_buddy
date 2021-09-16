@@ -180,7 +180,7 @@ class _PurchaseStageState extends State<PurchaseStage> {
                             textAlign: TextAlign.justify,
                             text: TextSpan(
 
-                                text: 'Project Start Date : \n',
+                                text: 'Project Created Date : \n',
                                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: COLOR_BLACK),
                                 children: [
                                   TextSpan(text: "\t\t"+ongoingProject.projectStartDate,

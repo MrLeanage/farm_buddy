@@ -76,16 +76,65 @@ class _PlaceSelectionStageState extends State<PlaceSelectionStage> {
                     child: Wrap(
                       children: [
                         Container(
-                          color: COLOR_GREEN,
-                          width: size.width,
-                          height: size.height*0.075,
-                          child: Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              'Step 2 : Set Up your Place',
-                              style: TextStyle(fontSize: 20, color : COLOR_WHITE, fontWeight: FontWeight.bold),
-                            ),
+                          width: size.width*0.9,
+                          height: size.height*0.07,
+                          decoration: BoxDecoration(
+                            // color: COLOR_BROWN,
+
+                            gradient: LinearGradient(
+                                colors: [
+                                  COLOR_GREEN,
+                                  COLOR_YELLOW
+                                ],
+                                begin: const FractionalOffset(0.2, 0.0),
+                                end: const FractionalOffset(1.0, 0.0),
+                                stops: [0.0, 1.0],
+                                tileMode: TileMode.clamp),
+                            borderRadius: BorderRadius.circular(size.width *0.1/8),
+                            // image: DecorationImage(
+                            //     fit: BoxFit.cover,
+                            //     image: NetworkImage(shopList[index].cropImageURL)
+                            // )
                           ),
+                          child: Row(
+                            children: [
+                              addHorizontalSpace(size.width*0.02),
+                              Container(
+
+                                child:FittedBox(
+                                    child: Icon(Icons.work, color: COLOR_GREEN, size: size.width*0.07,),
+                                    fit: BoxFit.none
+                                ),
+                                width: size.width *0.08,
+                                height: size.height*0.05,
+
+                                decoration: BoxDecoration(
+                                  // color: COLOR_BROWN,
+                                  color: COLOR_WHITE,
+
+                                  borderRadius: BorderRadius.circular(size.width *0.1/6),
+                                  // image: DecorationImage(
+                                  //     fit: BoxFit.cover,
+                                  //     image: NetworkImage(shopList[index].cropImageURL)
+                                  // )
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: RichText(
+                                  maxLines: null,
+                                  textAlign: TextAlign.left,
+                                  text: TextSpan(
+                                    text: "Step 2 : Set Up your Places",
+
+                                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: size.width*0.06, color: COLOR_WHITE),
+                                  ),
+
+                                ),
+                              ),
+                            ],
+                          ),
+
                         ),
 
                         addVerticalSpace(size.height*0.09),
@@ -412,17 +461,40 @@ class _PlaceSelectionStageState extends State<PlaceSelectionStage> {
                         ),
                         addVerticalSpace(size.height*0.09),
                         Container(
-                          color: COLOR_GREEN,
-                          width: size.width,
-                          height: size.height*0.075,
+                          width: size.width*0.9,
+                          height: size.height*0.065,
+                          decoration: BoxDecoration(
+                            // color: COLOR_BROWN,
+
+                            gradient: LinearGradient(
+                                colors: [
+                                  COLOR_GREEN,
+                                  COLOR_YELLOW
+                                ],
+                                begin: const FractionalOffset(0.2, 0.0),
+                                end: const FractionalOffset(1.0, 0.0),
+                                stops: [0.0, 1.0],
+                                tileMode: TileMode.clamp),
+                            borderRadius: BorderRadius.circular(size.width *0.1/8),
+                            // image: DecorationImage(
+                            //     fit: BoxFit.cover,
+                            //     image: NetworkImage(shopList[index].cropImageURL)
+                            // )
+                          ),
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              "Project Status",
-                              style: TextStyle(fontSize: 22, color : COLOR_WHITE, fontWeight: FontWeight.bold),
+                            child: RichText(
+                              maxLines: null,
+                              textAlign: TextAlign.justify,
+                              text: TextSpan(
+                                text: "Project Status",
+                                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22, color: COLOR_WHITE, ),
+
+                              ),
                             ),
                           ),
                         ),
+
                         addVerticalSpace(size.height*0.09),
                         Container(
                           width: size.width,
@@ -444,57 +516,151 @@ class _PlaceSelectionStageState extends State<PlaceSelectionStage> {
                         ),
                         Container(
                           width: size.width*0.9,
-                          child: RichText(
-                            maxLines: null,
-                            textAlign: TextAlign.justify,
-                            text: TextSpan(
-                                text: 'Project Status : \n',
-                                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: COLOR_BLACK),
-                                children: [
-                                  TextSpan(text: "\t\t"+ ongoingProject.status,
-                                      style:  TextStyle(fontWeight: FontWeight.normal)
-                                  )
-                                ]
-                            ),
+                          child: Row(
+                            children: [
+                              Container(
+                                width: size.width *0.1,
+                                height: size.height*0.065,
+                                child:FittedBox(
+                                    child: Icon(Icons.eco, color: COLOR_WHITE, size: size.width*0.08,),
+                                    fit: BoxFit.none
+                                ),
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                    colors: [
+                                      COLOR_GREEN,
+                                      COLOR_YELLOW,
+                                    ],
+                                  ),
+
+                                  borderRadius: BorderRadius.circular(size.width *0.1/4),
+                                  // image: DecorationImage(
+                                  //     fit: BoxFit.cover,
+                                  //     image: NetworkImage(shopList[index].cropImageURL)
+                                  // )
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: RichText(
+                                  maxLines: null,
+                                  textAlign: TextAlign.justify,
+                                  text: TextSpan(
+                                      text: 'Project Status : \n',
+                                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: COLOR_BLACK),
+                                      children: [
+                                        TextSpan(text: "\t\t"+ ongoingProject.status,
+                                            style:  TextStyle(fontWeight: FontWeight.normal)
+                                        )
+                                      ]
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                        addVerticalSpace(size.height*0.09),
+                        addVerticalSpace(size.height*0.02),
                         Container(
                           width: size.width*0.9,
-                          child: RichText(
-                            maxLines: null,
-                            textAlign: TextAlign.justify,
-                            text: TextSpan(
+                          child: Row(
+                            children: [
+                              Container(
+                                width: size.width *0.1,
+                                height: size.height*0.065,
+                                child:FittedBox(
+                                    child: Icon(Icons.date_range, color: COLOR_WHITE, size: size.width*0.08,),
+                                    fit: BoxFit.none
+                                ),
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                    colors: [
+                                      COLOR_GREEN,
+                                      COLOR_YELLOW,
+                                    ],
+                                  ),
 
-                                text: 'Project Start Date : \n',
-                                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: COLOR_BLACK),
-                                children: [
-                                  TextSpan(text: "\t\t"+ongoingProject.projectStartDate,
-                                      style:  TextStyle(fontWeight: FontWeight.normal)
-                                  )
-                                ]
-                            ),
+                                  borderRadius: BorderRadius.circular(size.width *0.1/4),
+                                  // image: DecorationImage(
+                                  //     fit: BoxFit.cover,
+                                  //     image: NetworkImage(shopList[index].cropImageURL)
+                                  // )
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: RichText(
+                                  maxLines: null,
+                                  textAlign: TextAlign.justify,
+                                  text: TextSpan(
+
+                                      text: 'Project Start Date : \n',
+                                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: COLOR_BLACK),
+                                      children: [
+                                        TextSpan(text: "\t\t"+ongoingProject.projectStartDate,
+                                            style:  TextStyle(fontWeight: FontWeight.normal)
+                                        )
+                                      ]
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                        addVerticalSpace(size.height*0.09),
+                        addVerticalSpace(size.height*0.02),
                         Container(
                           width: size.width*0.9,
-                          child: RichText(
-                            maxLines: null,
-                            textAlign: TextAlign.justify,
-                            text: TextSpan(
+                          decoration: BoxDecoration(
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                width: size.width *0.1,
+                                height: size.height*0.065,
+                                child:FittedBox(
+                                    child: Icon(Icons.update, color: COLOR_WHITE, size: size.width*0.08,),
+                                    fit: BoxFit.none
+                                ),
+                                decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                    colors: [
+                                      COLOR_GREEN,
+                                      COLOR_YELLOW,
+                                    ],
+                                  ),
 
-                                text: 'Project Last Updated Date : \n',
-                                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: COLOR_BLACK),
-                                children: [
-                                  TextSpan(text: "\t\t"+ongoingProject.projectLastUpdateDate,
-                                      style:  TextStyle(fontWeight: FontWeight.normal)
-                                  )
-                                ]
-                            ),
+                                  borderRadius: BorderRadius.circular(size.width *0.1/4),
+                                  // image: DecorationImage(
+                                  //     fit: BoxFit.cover,
+                                  //     image: NetworkImage(shopList[index].cropImageURL)
+                                  // )
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: RichText(
+                                  maxLines: null,
+                                  textAlign: TextAlign.justify,
+                                  text: TextSpan(
+
+                                      text: 'Project Last Updated Date : \n',
+                                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: COLOR_BLACK),
+                                      children: [
+                                        TextSpan(text: "\t\t"+ongoingProject.projectLastUpdateDate,
+                                            style:  TextStyle(fontWeight: FontWeight.normal)
+                                        )
+                                      ]
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                        addVerticalSpace(size.height*0.1),
                         MaterialButton(
                           onPressed: () async{
                             Alert(

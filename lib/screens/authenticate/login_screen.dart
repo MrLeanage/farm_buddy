@@ -57,7 +57,15 @@ class _LoginScreenState extends State<LoginScreen> {
         children: <Widget>[
           Container(
             decoration: BoxDecoration(
-              color: COLOR_GREEN
+              gradient:LinearGradient(
+                  colors: [
+                    COLOR_GREEN,
+                    COLOR_YELLOW
+                  ],
+                  begin: const FractionalOffset(0.4, 0.0),
+                  end: const FractionalOffset(1.0, 0.0),
+                  stops: [0.0, 1.0],
+                  tileMode: TileMode.clamp),
             ),
           ),
           Center(

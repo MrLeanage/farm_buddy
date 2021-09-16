@@ -431,15 +431,7 @@ class _ProjectTaskState extends State<ProjectTask> {
                         Container(
                           height: size.height*0.32,
                           decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                begin: Alignment.topLeft,
-                                end: Alignment.bottomRight,
-                                colors: [
-                                  COLOR_GREEN,
-                                  COLOR_YELLOW,
-                                ],
 
-                              ),
                               borderRadius: BorderRadius.circular(size.width *0.1/4),
                           ),
                           child: Padding(
@@ -448,27 +440,24 @@ class _ProjectTaskState extends State<ProjectTask> {
                               children: [
                                 Container(
                                   width: size.width*0.9,
-                                  decoration: BoxDecoration(
-                                      gradient: LinearGradient(
-                                        begin: Alignment.topLeft,
-                                        end: Alignment.bottomRight,
-                                        colors: [
-                                          COLOR_GREEN,
-                                          COLOR_YELLOW,
-                                        ],
-                                      )
-                                  ),
                                   child: Row(
                                     children: [
                                       Container(
                                         width: size.width *0.1,
                                         height: size.height*0.065,
                                         child:FittedBox(
-                                            child: Icon(Icons.eco, color: COLOR_GREEN, size: size.width*0.08,),
+                                            child: Icon(Icons.eco, color: COLOR_WHITE, size: size.width*0.08,),
                                             fit: BoxFit.none
                                         ),
                                         decoration: BoxDecoration(
-                                          color: COLOR_WHITE,
+                                          gradient: LinearGradient(
+                                            begin: Alignment.topLeft,
+                                            end: Alignment.bottomRight,
+                                            colors: [
+                                              COLOR_GREEN,
+                                              COLOR_YELLOW,
+                                            ],
+                                          ),
 
                                           borderRadius: BorderRadius.circular(size.width *0.1/4),
                                           // image: DecorationImage(
@@ -484,7 +473,7 @@ class _ProjectTaskState extends State<ProjectTask> {
                                           textAlign: TextAlign.justify,
                                           text: TextSpan(
                                               text: 'Project Status : \n',
-                                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: COLOR_WHITE),
+                                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: COLOR_BLACK),
                                               children: [
                                                 TextSpan(text: "\t\t"+ ongoingProject.status,
                                                     style:  TextStyle(fontWeight: FontWeight.normal)
@@ -499,27 +488,24 @@ class _ProjectTaskState extends State<ProjectTask> {
                                 addVerticalSpace(size.height*0.02),
                                 Container(
                                   width: size.width*0.9,
-                                  decoration: BoxDecoration(
-                                      gradient: LinearGradient(
-                                        begin: Alignment.topLeft,
-                                        end: Alignment.bottomRight,
-                                        colors: [
-                                          COLOR_GREEN,
-                                          COLOR_YELLOW,
-                                        ],
-                                      )
-                                  ),
                                   child: Row(
                                     children: [
                                       Container(
                                         width: size.width *0.1,
                                         height: size.height*0.065,
                                         child:FittedBox(
-                                            child: Icon(Icons.date_range, color: COLOR_GREEN, size: size.width*0.08,),
+                                            child: Icon(Icons.date_range, color: COLOR_WHITE, size: size.width*0.08,),
                                             fit: BoxFit.none
                                         ),
                                         decoration: BoxDecoration(
-                                          color: COLOR_WHITE,
+                                          gradient: LinearGradient(
+                                            begin: Alignment.topLeft,
+                                            end: Alignment.bottomRight,
+                                            colors: [
+                                              COLOR_GREEN,
+                                              COLOR_YELLOW,
+                                            ],
+                                          ),
 
                                           borderRadius: BorderRadius.circular(size.width *0.1/4),
                                           // image: DecorationImage(
@@ -536,7 +522,7 @@ class _ProjectTaskState extends State<ProjectTask> {
                                           text: TextSpan(
 
                                               text: 'Project Start Date : \n',
-                                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: COLOR_WHITE),
+                                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: COLOR_BLACK),
                                               children: [
                                                 TextSpan(text: "\t\t"+ongoingProject.projectStartDate,
                                                     style:  TextStyle(fontWeight: FontWeight.normal)
@@ -552,14 +538,6 @@ class _ProjectTaskState extends State<ProjectTask> {
                                 Container(
                                   width: size.width*0.9,
                                   decoration: BoxDecoration(
-                                      gradient: LinearGradient(
-                                        begin: Alignment.topLeft,
-                                        end: Alignment.bottomRight,
-                                        colors: [
-                                          COLOR_GREEN,
-                                          COLOR_YELLOW,
-                                        ],
-                                      )
                                   ),
                                   child: Row(
                                     children: [
@@ -567,11 +545,18 @@ class _ProjectTaskState extends State<ProjectTask> {
                                         width: size.width *0.1,
                                         height: size.height*0.065,
                                         child:FittedBox(
-                                            child: Icon(Icons.update, color: COLOR_GREEN, size: size.width*0.08,),
+                                            child: Icon(Icons.update, color: COLOR_WHITE, size: size.width*0.08,),
                                             fit: BoxFit.none
                                         ),
                                         decoration: BoxDecoration(
-                                          color: COLOR_WHITE,
+                                          gradient: LinearGradient(
+                                            begin: Alignment.topLeft,
+                                            end: Alignment.bottomRight,
+                                            colors: [
+                                              COLOR_GREEN,
+                                              COLOR_YELLOW,
+                                            ],
+                                          ),
 
                                           borderRadius: BorderRadius.circular(size.width *0.1/4),
                                           // image: DecorationImage(
@@ -588,7 +573,7 @@ class _ProjectTaskState extends State<ProjectTask> {
                                           text: TextSpan(
 
                                               text: 'Project Last Updated Date : \n',
-                                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: COLOR_WHITE),
+                                              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: COLOR_BLACK),
                                               children: [
                                                 TextSpan(text: "\t\t"+ongoingProject.projectLastUpdateDate,
                                                     style:  TextStyle(fontWeight: FontWeight.normal)
