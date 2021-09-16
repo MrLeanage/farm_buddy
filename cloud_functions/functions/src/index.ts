@@ -10,6 +10,8 @@ export {onRequestAllShopList} from "./api/onRequestShopList";
 export {onRequestToCompletePhaseOne} from "./api/onRequestToCompletePhaseOne";
 export {onRequestToCompletePhaseTwo} from "./api/onRequestToCompletePhaseTwo";
 export {onRequestToUpdateQuestionAnswer} from "./api/onRequestToUpdateQuestionAnswer";
+export {onRequestUserProjectList} from "./api/onRequestUserProjectList";
+export {onRequestPredictionData} from "./api/onRequestPredictionData";
 
 export {onRequestWeather} from "./api/onRequestWeather";
 export {onRequestSpecificProjectInfo} from "./api/onRequestSpecificProjectInfo";

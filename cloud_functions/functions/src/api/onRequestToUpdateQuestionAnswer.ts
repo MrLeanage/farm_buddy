@@ -1,13 +1,14 @@
 import * as functions from 'firebase-functions';
 import * as admin from "firebase-admin";
-import {PlantProjectHandler} from "../model/plant/PlantProjectHandler";
+import * as utility from '../utils/Utility'
 
 export const onRequestToUpdateQuestionAnswer = functions.https.onRequest(
     (request, response) => {
         const requestData = request.body;
         if (request.method === 'POST') {
-            if(requestData?.projectID && requestData?.stage && requestData?.questionType && requestData?.index){
+            if(requestData?.projectID && requestData?.questionID){
                 const db = admin.firestore();
+                const stageQuestion = utility.traceStageQuestion(requestData?.questionID)
                 db.collection('projects')
                     .doc(requestData?.projectID)
                     .get()
@@ -15,14 +16,17 @@ export const onRequestToUpdateQuestionAnswer = functions.https.onRequest(
                         if (doc.exists) {
                             const projectData : any = doc.data();
 
-                            projectData[requestData?.stage][requestData?.questionType][requestData?.index].answer = true
+                            projectData[stageQuestion.stage][stageQuestion.questionType][stageQuestion.questionID].answer = true
                             projectData.projectStatus.lastUpdatedOn = new Date();
                             db.collection('projects').doc(requestData?.projectID).update(projectData).then(() => {
-                                const plantProjectHandler : PlantProjectHandler = new PlantProjectHandler(projectData);
                                 response.status(200).send({
                                     actionStatus : true,
-                                    stage_data: plantProjectHandler.plantProjectData
+
                                 });
+                            }).catch((error) => {
+                                response.status(500).send({
+                                    actionStatus : false,
+                                    result: error});
 
                             }).catch((error) => {
                                 console.error('Failed to update document from project collection. Error => %s', error);

@@ -5,15 +5,19 @@ export const onRequestToCreateProject = functions.https.onRequest(
     (request, response) => {
 
         const requestData = request.body;
-        let projectData: any = {
-            "projectName": requestData.name,
-            "cropID": requestData.cropID,
-            "uID" : requestData.uID
-        };
-        if (request.method === 'POST') {
+
+        if (request.method === 'POST' && requestData?.geoLocation?.longitude && requestData?.geoLocation?.latitude) {
             if (requestData?.name && requestData?.cropID && requestData?.uID) {
                 const db = admin.firestore();
-
+                let projectData: any = {
+                    "projectName": requestData.name,
+                    "cropID": requestData.cropID,
+                    "geoLocation":{
+                        "longitude": requestData.geoLocation.longitude,
+                        "latitude": requestData.geoLocation.latitude
+                    },
+                    "uID" : requestData.uID
+                };
                 db.collection('projects')
                     .add(projectData)
                     .then((docResponse) => {

@@ -6,6 +6,7 @@ export class PlantGrowthStage{
     private readonly _stageName: string = "";
     private readonly _stageStartDate: string = "";
     private readonly _completed: boolean = false;
+    private readonly _stageWater: string = "0 mm";
     private readonly _dailyWater: string = "0 mm";
     private readonly _stageLifeSpan: number = 0;
     private readonly _stageDayCounter: number = 0;
@@ -13,17 +14,19 @@ export class PlantGrowthStage{
     private readonly _diseaseQuestionList : Question[] = [];
 
 
-    constructor(stageID: string, stageName: string, stageStartDate: number, completed: boolean, dailyWater: string, stageLifeSpan: number,  growthQuestionList: Question[], diseaseQuestionList: Question[]) {
+    constructor(stageID: string, stageName: string, stageStartDate: number, completed: boolean, stageWater: string, dailyWater: string, stageLifeSpan: number,  growthQuestionList: Question[], diseaseQuestionList: Question[]) {
         this._stageID = stageID;
         this._stageName = stageName;
-        this._stageStartDate = Utility.convertTimeStampToDate(stageStartDate);
+        this._stageStartDate = Utility.convertTimeStampToDate(new Date(stageStartDate));
         this._completed = this.stageCompleteStatus(Utility.convertQuestionJsonDataToArrayList(growthQuestionList), completed);
+        this._stageWater = stageWater;
         this._dailyWater = dailyWater;
         this._stageLifeSpan = stageLifeSpan;
         this._stageDayCounter = Utility.GetNoOfDaysBetweenTwoDates(new Date(stageStartDate), new Date());
         this._growthQuestionList = this.filteredGrowthQuestionList(Utility.convertQuestionJsonDataToArrayList(growthQuestionList));
         this._diseaseQuestionList = this.filteredDiseaseQuestionList(Utility.convertQuestionJsonDataToArrayList(diseaseQuestionList));
     }
+
 
 
     get stageID(): string {
@@ -42,6 +45,8 @@ export class PlantGrowthStage{
         return this._completed;
     }
 
+
+
     stageCompleteStatus(questionList : Question[], currentStatus : boolean) : boolean{
         let status :boolean = true;
         if(!currentStatus){
@@ -52,6 +57,10 @@ export class PlantGrowthStage{
             });
         }
         return status;
+    }
+
+    get stageWater(): string {
+        return this._stageWater;
     }
 
     get dailyWater(): string {

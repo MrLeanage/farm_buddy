@@ -1,11 +1,11 @@
 export class Question{
-    private _indexNo: number = 0;
+    private _indexNo: string = "";
     private _question: string = "";
     private _answer: boolean = false;
     private _moveCount: number = 0;
     private _important: boolean = false;
 
-    public constructor(indexNo: number, question: string, answer: boolean, moveCount: number, important: boolean) {
+    public constructor(indexNo: string, question: string, answer: boolean, moveCount: number, important: boolean) {
         this._indexNo = indexNo;
         this._question = question;
         this._answer = answer;
@@ -14,11 +14,11 @@ export class Question{
     }
 
 
-    get indexNo(): number {
+    get indexNo(): string {
         return this._indexNo;
     }
 
-    set indexNo(value: number) {
+    set indexNo(value: string) {
         this._indexNo = value;
     }
 

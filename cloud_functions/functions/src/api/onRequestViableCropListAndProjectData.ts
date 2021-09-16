@@ -1,8 +1,9 @@
 import * as functions from 'firebase-functions';
 import * as admin from "firebase-admin";
-import * as utility from '../utils/Utility'
+import * as utility from '../utils/Utility';
+import * as rainPredictionReport from '../model/weather/RainPredictionReport';
 
-export const onRequestViableCropList = functions.https.onRequest(
+export const onRequestViableCropListAndProjectData = functions.https.onRequest(
     (request, response) => {
         const requestData = request.body;
         const yalaSeasonStartMonth: number = 1;
@@ -10,13 +11,19 @@ export const onRequestViableCropList = functions.https.onRequest(
         // const mahaSeasonStartMonth: number = 1;
         // const mahaSeasonEndMonth: number = 1;
         let currentSeason: string = 'MAHA';
-        //let viableCropPrediction: any;
+        let viableCropPrediction: any;
         const viableCropList: {}[] = [];
 
         if (request.method === 'POST' && requestData?.geoLocation?.state && requestData?.geoLocation?.longitude && requestData?.geoLocation?.latitude) {
             const deviceMonth = parseInt(utility.convertTimeStampToDate(new Date()));
             if (deviceMonth >= yalaSeasonStartMonth && deviceMonth <= yalaSeasonEndMonth)
                 currentSeason = 'YALA';
+
+            rainPredictionReport.rainPredictionForPlantSelection(requestData?.geoLocation?.longitude, requestData?.geoLocation?.latitude, 5)
+                .then((predictionReport) => {
+                    viableCropPrediction = predictionReport;
+
+
                     const db = admin.firestore();
                     db.collection('crops')
                         .where('plantingStateList', 'array-contains', requestData?.geoLocation?.state)
@@ -50,13 +57,24 @@ export const onRequestViableCropList = functions.https.onRequest(
 
                                 });
                             });
-                            response.status(200).send(viableCropList);
+                            response.status(200).send({
+                                actionStatus : true,
+                                predictionReport: viableCropPrediction,
+                                viableCropData: viableCropList
+                            });
                         }).catch((error) => {
                         console.error('Failed to retrieve documents from crops collection. Error => %s', error);
                         response.status(500).send({
                             actionStatus : false,
                             result: "Server error occurred"});
                     });
+
+                }).catch((error) => {
+                response.status(500).send({
+                    actionStatus : false,
+                    originatedFrom: 'rain prediction',
+                    result: error});
+            })
         } else {
             response.status(400).send({
                 actionStatus : false,

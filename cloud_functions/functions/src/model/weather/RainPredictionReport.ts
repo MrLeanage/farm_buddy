@@ -17,9 +17,8 @@ export function rainPredictionForPlantSelection(longitudes: string, latitudes: s
                 const rainPrediction: RainPredictionHandler = new RainPredictionHandler(rainDataList);
                 const rainPredictionReport = {
                     duration: rainPrediction.duration,
-                    test: 'testValues',
                     predictionStatus: rainPrediction.predictionStatus,
-                    //averageRainfall: rainPrediction.averageRainfall,
+                    averageRainfall: rainPrediction.averageRainfall,
                     predictionInfo: rainPrediction.predictionInfo,
                     wateringLevel: rainPrediction.wateringLevel,
                     isGoodToSeeding: rainPrediction.isGoodToSeeding,

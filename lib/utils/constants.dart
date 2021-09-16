@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 const COLOR_GREEN = Color.fromRGBO(2, 75, 41, 1);
+const COLOR_BLUE = Colors.blue;
 const COLOR_YELLOW = Color.fromRGBO(247, 183, 0, 1);
 const COLOR_BLACK = Color.fromRGBO(0,0,0,1);
 const COLOR_GREY = Color.fromRGBO(73,72,68,1);
+const COLOR_LIGHT_GREY = Colors.grey;
 const COLOR_WHITE = Color.fromRGBO(255,255,255,1);
 const COLOR_RED = Color.fromRGBO(255,0,0,1);
 const COLOR_BROWN = Color.fromRGBO(65, 27, 12, 1);
-const COLOR_BACKGROUND = Color.fromRGBO(2, 75, 41, 1);
+const COLOR_BACKGROUND =  Color.fromRGBO(255,255,255,1);
 const COLOR_LIGHT_GREEN = Colors.green;
 
 const TextTheme TEXT_THEME_DEFAULT = TextTheme(

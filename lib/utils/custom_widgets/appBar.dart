@@ -11,8 +11,8 @@ Widget customAppBar(double screenHeight, double screenWidth, GlobalKey<ScaffoldS
     width: screenWidth,
     decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
-            bottomLeft: Radius.circular(screenHeight * 0.02),
-            bottomRight: Radius.circular(screenHeight * 0.02)
+            // bottomLeft: Radius.circular(screenHeight * 0.02),
+            // bottomRight: Radius.circular(screenHeight * 0.02)
         ),
         color: COLOR_WHITE,
         boxShadow: [
@@ -32,7 +32,7 @@ Widget customAppBar(double screenHeight, double screenWidth, GlobalKey<ScaffoldS
           IconButton(
             onPressed: () => _scaffoldKey.currentState!.openDrawer(),
             icon: Icon(Icons.menu),
-            color: COLOR_BACKGROUND,
+            color: COLOR_GREEN,
           ),
 
 

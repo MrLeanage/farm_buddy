@@ -11,7 +11,7 @@ export const onProjectCreation = functions.firestore.document('projects/{project
             startDate: new Date(),
             endDate: null,
             lastUpdatedOn : new Date(),
-            status: "Started"
+            status: "Not Started"
         };
         db.collection('crops').doc(projectData.cropID).get()
             .then((cropDoc) => {
@@ -23,12 +23,13 @@ export const onProjectCreation = functions.firestore.document('projects/{project
                         name: cropData.name,
                         imageURL: cropData.imageURL,
                         description: cropData.description,
+
                         lifeSpan: cropData.lifeSpan
                     };
 
                     // Stage 1
                     projectData['stage1'] = cropData.stage1;
-                    projectData.stage1.ID = Utility.generateStageToken(cropData.stage1.name);
+                    projectData.stage1.stageID = Utility.generateStageToken(cropData.stage1.name);
                     projectData.stage1.startDate = null;
                     projectData.stage1.completed = false;
 
@@ -48,16 +49,16 @@ export const onProjectCreation = functions.firestore.document('projects/{project
                     for (let i = 0; i < cropData['stage1']['growthQuestionList'].length; i++) {
                         stage1GrowthQuestionList.push({
                             indexNo: "S1GQ"+ i,
-                            question: cropData['stage1']['growthQuestionList'][i],
+                            question: cropData['stage1']['growthQuestionList'][i].question,
                             answer: false,
-                            oveCount: cropData.stage1.growthQuestionList[i].moveCount,
+                            moveCount: cropData.stage1.growthQuestionList[i].moveCount,
                             important: cropData.stage1.growthQuestionList[i].important
                         });
                     }
                     projectData.stage1.growthQuestionList = stage1GrowthQuestionList;
                     // Stage 2
                     projectData['stage2'] = cropData.stage2;
-                    projectData.stage2.ID = Utility.generateStageToken(cropData.stage2.name);
+                    projectData.stage2.stageID = Utility.generateStageToken(cropData.stage2.name);
                     projectData.stage2.startDate = null;
                     projectData.stage2.completed = false;
 
@@ -77,9 +78,9 @@ export const onProjectCreation = functions.firestore.document('projects/{project
                     for (let i = 0; i < cropData['stage2']['growthQuestionList'].length; i++) {
                         stage2GrowthQuestionList.push({
                             indexNo: "S2GQ"+ i,
-                            question: cropData['stage2']['growthQuestionList'][i],
+                            question: cropData['stage2']['growthQuestionList'][i].question,
                             answer: false,
-                            oveCount: cropData.stage2.growthQuestionList[i].moveCount,
+                            moveCount: cropData.stage2.growthQuestionList[i].moveCount,
                             important: cropData.stage2.growthQuestionList[i].important
                         });
                     }
@@ -87,7 +88,7 @@ export const onProjectCreation = functions.firestore.document('projects/{project
 
                     // Stage 3
                     projectData['stage3'] = cropData.stage3;
-                    projectData.stage3.ID = Utility.generateStageToken(cropData.stage3.name);
+                    projectData.stage3.stageID = Utility.generateStageToken(cropData.stage3.name);
                     projectData.stage3.startDate = null;
                     projectData.stage3.completed = false;
 
@@ -107,9 +108,9 @@ export const onProjectCreation = functions.firestore.document('projects/{project
                     for (let i = 0; i < cropData['stage3']['growthQuestionList'].length; i++) {
                         stage3GrowthQuestionList.push({
                             indexNo: "S3GQ"+ i,
-                            question: cropData['stage3']['growthQuestionList'][i],
+                            question: cropData['stage3']['growthQuestionList'][i].question,
                             answer: false,
-                            oveCount: cropData.stage3.growthQuestionList[i].moveCount,
+                            moveCount: cropData.stage3.growthQuestionList[i].moveCount,
                             important: cropData.stage3.growthQuestionList[i].important
                         });
                     }
@@ -117,7 +118,7 @@ export const onProjectCreation = functions.firestore.document('projects/{project
 
                     //Stage 4
                     projectData['stage4'] = cropData.stage4;
-                    projectData.stage4.ID = Utility.generateStageToken(cropData.stage4.name);
+                    projectData.stage4.stageID = Utility.generateStageToken(cropData.stage4.name);
                     projectData.stage4.startDate = null;
                     projectData.stage4.completed = false;
 
@@ -137,9 +138,9 @@ export const onProjectCreation = functions.firestore.document('projects/{project
                     for (let i = 0; i < cropData['stage4']['growthQuestionList'].length; i++) {
                         stage4GrowthQuestionList.push({
                             indexNo: "S4GQ"+ i,
-                            question: cropData['stage4']['growthQuestionList'][i],
+                            question: cropData['stage4']['growthQuestionList'][i].question,
                             answer: false,
-                            oveCount: cropData.stage4.growthQuestionList[i].moveCount,
+                            moveCount: cropData.stage4.growthQuestionList[i].moveCount,
                             important: cropData.stage4.growthQuestionList[i].important
                         });
                     }

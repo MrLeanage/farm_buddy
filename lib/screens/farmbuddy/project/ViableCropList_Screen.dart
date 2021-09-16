@@ -1,14 +1,12 @@
 import 'dart:ui';
 
-import 'package:farm_buddy/screens/farmbuddy/project/viewPlantingProject.dart';
 import 'package:farm_buddy/utils/constants.dart';
-import 'package:farm_buddy/utils/custom_widgets/addSpace_widget.dart';
 import 'package:farm_buddy/utils/custom_widgets/appBar.dart';
 import 'package:farm_buddy/utils/custom_widgets/pageHeading_widget.dart';
 import 'package:farm_buddy/utils/custom_widgets/sidebar_widget.dart';
 import 'package:flutter/material.dart';
 
-import 'createPlantingProject.dart';
+import '../../../trash/CreateProjectStep_Screen.dart';
 class Project extends StatefulWidget {
   @override
   _ProjectState createState() => _ProjectState();
@@ -21,10 +19,7 @@ class _ProjectState extends State<Project> with SingleTickerProviderStateMixin {
   List<Widget> tabList = [
       Tab(
         text: "Planting Projects",
-      ),
-      Tab(
-        text: "Fertilizer Projects",
-      ),
+      )
   ];
   List projectList = [
     "Tomato Bed 1",
@@ -131,9 +126,9 @@ class _ProjectState extends State<Project> with SingleTickerProviderStateMixin {
                                trailing: Icon(Icons.library_add),
                                onTap: (){
                                  debugPrint("List Tile Tapped");
-                                 Navigator.push(context, MaterialPageRoute(builder: (context){
-                                   return ViewPlantingProject();
-                                 }));
+                                 // Navigator.push(context, MaterialPageRoute(builder: (context){
+                                 //   return ViewPlantingProject();
+                                 // }));
                                },
                              ),
                              //child: PageHeadingWidget(projectList[index], Icons.library_add, screenHeight, screenWidth)
@@ -141,18 +136,18 @@ class _ProjectState extends State<Project> with SingleTickerProviderStateMixin {
                          }
                        ),
                       ),
-                      Container(
-                        height: screenHeight * 0.1,
-                        child: Center(
-                          child: Text(
-                            "On Going Fertilizer Projects",
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold
-                            ),
-                          ),
-                        ),
-                      ),
+                      // Container(
+                      //   height: screenHeight * 0.1,
+                      //   child: Center(
+                      //     child: Text(
+                      //       "On Going Fertilizer Projects",
+                      //       style: TextStyle(
+                      //           fontSize: 20,
+                      //           fontWeight: FontWeight.bold
+                      //       ),
+                      //     ),
+                      //   ),
+                      // ),
                     ],
                   ),
                   floatingActionButton: FloatingActionButton(
@@ -161,7 +156,7 @@ class _ProjectState extends State<Project> with SingleTickerProviderStateMixin {
                       debugPrint("Screeen width :"+screenWidth.toString());
                       print("clicked Add");
                       Navigator.push(context, MaterialPageRoute(builder: (context){
-                        return CreatePlantingProject();
+                        return CreatePlantingProjectStepOne();
                       }));
                       // Add your onPressed code here!
                     },

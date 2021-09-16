@@ -3,7 +3,8 @@ import * as admin from "firebase-admin";
 
 export const onRequestAllShopList = functions.https.onRequest(
     (request, response) => {
-        let shopList: any = {};
+
+        const shopList: {}[] = [];
 
         if (request.method === 'POST') {
             const db = admin.firestore();
@@ -13,7 +14,7 @@ export const onRequestAllShopList = functions.https.onRequest(
                 .then((snap) => {
                     snap.forEach((doc) => {
                         const shopData: any = doc.data();
-                        shopList = shopData
+                         shopList.push(shopData)
                     });
                     response.status(200).send(shopList);
                 }).catch((error) => {

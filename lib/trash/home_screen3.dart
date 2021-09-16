@@ -1,9 +1,9 @@
 import 'package:connectivity/connectivity.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:farm_buddy/screens/farmbuddy/encyclopaedia/encyclopaedia.dart';
-import 'package:farm_buddy/screens/farmbuddy/project/project.dart';
-import 'package:farm_buddy/screens/farmbuddy/settings/settings.dart';
-import 'package:farm_buddy/screens/farmbuddy/shop/shop.dart';
+import 'package:farm_buddy/screens/farmbuddy/encyclopaedia/Encyclopaedia_Screen.dart';
+import 'package:farm_buddy/screens/farmbuddy/project/Project_Screen.dart';
+import 'package:farm_buddy/screens/farmbuddy/settings/Settings_Screen.dart';
+import 'package:farm_buddy/screens/farmbuddy/shop/Shop_Screen.dart';
 import 'package:farm_buddy/services/authenticate_service.dart';
 import 'package:farm_buddy/utils/constants.dart';
 import 'package:farm_buddy/utils/custom_widgets/addSpace_widget.dart';
@@ -31,8 +31,8 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Widget> list = [
     HomeScreen(),
     Settings(),
-    Shop(),
-    Project(),
+    ShopScreen(),
+    ProjectScreen(),
     Encyclopaedia()
   ];
 

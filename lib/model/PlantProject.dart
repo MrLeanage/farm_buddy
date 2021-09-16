@@ -16,14 +16,15 @@ class PlantingProject{
     required this.updatedAt,
 
   });
+
   Map<String, dynamic> toMap(){
     return{
       'pID': pID,
       'pName' : pName,
-      'pName' : pStartDate,
-      'pName' : pEndDate,
-      'pName' : createdAt,
-      'pName' : updatedAt ,
+      'pStartDate' : pStartDate,
+      'pEndDate' : pEndDate,
+      'createdAt' : createdAt,
+      'updatedAt' : updatedAt ,
     };
   }
 

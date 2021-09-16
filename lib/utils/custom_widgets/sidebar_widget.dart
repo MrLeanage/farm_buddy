@@ -1,9 +1,10 @@
 
-import 'package:farm_buddy/screens/farmbuddy/app_home/app_base.dart';
-import 'package:farm_buddy/screens/farmbuddy/encyclopaedia/encyclopaedia.dart';
-import 'package:farm_buddy/screens/farmbuddy/project/project.dart';
-import 'package:farm_buddy/screens/farmbuddy/settings/settings.dart';
-import 'package:farm_buddy/screens/farmbuddy/shop/shop.dart';
+import 'package:farm_buddy/screens/farmbuddy/app_home/AppBase_Screen.dart';
+import 'package:farm_buddy/screens/farmbuddy/encyclopaedia/Encyclopaedia_Screen.dart';
+import 'package:farm_buddy/screens/farmbuddy/project/Project_Screen.dart';
+import 'package:farm_buddy/screens/farmbuddy/settings/Settings_Screen.dart';
+import 'package:farm_buddy/screens/farmbuddy/shop/Shop_Screen.dart';
+import 'package:farm_buddy/services/api_service.dart';
 import 'package:farm_buddy/services/authenticate_service.dart';
 import 'package:farm_buddy/utils/constants.dart';
 import 'snackBar_widget.dart';
@@ -17,10 +18,6 @@ import 'addSpace_widget.dart';
 class SideBar extends StatelessWidget {
 
   String? displayName = FirebaseAuth.instance.currentUser!.displayName;
-
-
-
-
    //SideBar({Key? key, required this.onTap}) : super(key: key);
 
   @override
@@ -52,7 +49,7 @@ class SideBar extends StatelessWidget {
                     ),
                     addVerticalSpace(2),
                     Text(
-                      'Logged User',
+                        this.displayName.toString(),
                       style: TextStyle(
                         color: COLOR_WHITE,
                         fontSize: 18

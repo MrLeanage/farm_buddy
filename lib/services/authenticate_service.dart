@@ -54,6 +54,11 @@ class AuthService{
     }
   }
 
+  Future getCurrentUser() async {
+    User? user = firebaseAuth.currentUser;
+    return user;
+  }
+
   //sign out
   Future signOut() async{
     try{

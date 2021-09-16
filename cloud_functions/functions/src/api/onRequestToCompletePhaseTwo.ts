@@ -1,6 +1,7 @@
 import * as functions from 'firebase-functions';
 import * as admin from "firebase-admin";
 import {PlantProjectHandler} from "../model/plant/PlantProjectHandler";
+import * as rainPredictionReport from "../model/weather/RainPredictionReport";
 
 export const onRequestToCompletePhaseTwo = functions.https.onRequest(
     (request, response) => {
@@ -17,12 +18,22 @@ export const onRequestToCompletePhaseTwo = functions.https.onRequest(
                             projectData.initialization.place_selectionStatus = true;
                             projectData.stage1.startDate = new Date();
                             projectData.projectStatus.lastUpdatedOn = new Date();
+                            projectData.projectStatus.status = "Started";
                             db.collection('projects').doc(requestData?.projectID).update(projectData).then(() => {
-                                const plantProjectHandler : PlantProjectHandler = new PlantProjectHandler(projectData);
-                                response.status(200).send({
-                                    actionStatus : true,
-                                    stage_data: plantProjectHandler.plantProjectData
-                                });
+                                let plantProjectHandler : PlantProjectHandler;
+                                rainPredictionReport.rainPredictionForPlantSelection(projectData.geoLocation.longitude, projectData.geoLocation.latitude, 5)
+                                    .then((predictionReport) => {
+                                        plantProjectHandler = new PlantProjectHandler(projectData, predictionReport)
+                                        response.status(200).send({
+                                            actionStatus : true,
+                                            stage_data: plantProjectHandler.plantProjectData
+                                        });
+                                    }).catch((error) => {
+                                    response.status(500).send({
+                                        actionStatus : false,
+                                        originatedFrom: 'rain prediction',
+                                        result: error});
+                                })
 
                             }).catch((error) => {
                                 console.error('Failed to update document from project collection. Error => %s', error);

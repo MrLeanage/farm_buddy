@@ -1,6 +1,7 @@
 import 'dart:ui';
 
-import 'package:farm_buddy/screens/farmbuddy/app_home/app_base.dart';
+import 'package:farm_buddy/screens/farmbuddy/app_home/AppBase_Screen.dart';
+import 'package:farm_buddy/screens/farmbuddy/project/Project_Screen.dart';
 import 'utils/custom_widgets/loader_widget.dart';
 import 'screens/wrapper.dart';
 import 'package:farm_buddy/services/authenticate_service.dart';
@@ -28,6 +29,7 @@ class _FarmBuddyAppState extends State<FarmBuddyApp> {
   double screenWidth = window.physicalSize.width;
   @override
   Widget build(BuildContext context) {
+
     return StreamProvider<User>.value (
 
       value: AuthService().user,
@@ -41,7 +43,8 @@ class _FarmBuddyAppState extends State<FarmBuddyApp> {
           routes:{
             SignupScreen.routeName: (ctx) => SignupScreen(),
             LoginScreen.routeName: (ctx) => LoginScreen(),
-            HomeScreen.routeName: (ctx) => HomeScreen()
+            HomeScreen.routeName: (ctx) => HomeScreen(2),
+            ProjectScreen.routeName: (ctx) => ProjectScreen()
           }
       ),
 
