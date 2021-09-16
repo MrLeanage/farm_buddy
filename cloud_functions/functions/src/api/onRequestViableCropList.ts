@@ -41,7 +41,13 @@ export const onRequestViableCropList = functions.https.onRequest(
                                     name: cropData.name,
                                     imageURL: cropData.imageURL,
                                     description: cropData.description,
-                                    placeSelection: cropData.placeSelection,
+                                    initialization: {
+                                        place :{
+                                            id: cropData.placeSelection.pSID,
+                                            name: cropData.placeSelection.pSName
+
+                                        }
+                                    },
                                     lifeSpan: cropData.lifeSpan,
                                     cropNote: {
                                         noteStatus: noteStatus,

@@ -17,8 +17,7 @@ class _FeedsState extends State<Feeds> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
-    final double screenWidth = window.physicalSize.width;
-    final double screenHeight = window.physicalSize.height;
+    final Size size = MediaQuery.of(context).size;
     return Scaffold(
       key: _scaffoldKey,
       drawer: SideBar(),
@@ -26,8 +25,8 @@ class _FeedsState extends State<Feeds> {
 
       body: Column(
         children: [
-          customAppBar(screenHeight, screenWidth, _scaffoldKey),
-          PageHeadingWidget("FEEDS", Icons.feed, screenHeight, screenWidth),
+          customAppBar(size.height, size.width, _scaffoldKey),
+          PageHeadingWidget("FEEDS", Icons.feed, size.height, size.width),
 
         ],
       ),

@@ -50,8 +50,6 @@ class _ShopScreenState extends State<ShopScreen> with SingleTickerProviderStateM
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    final double screenWidth = window.physicalSize.width;
-    final double screenHeight = window.physicalSize.height;
     return Scaffold(
       key: _scaffoldKey,
       drawer: SideBar(),
@@ -59,17 +57,17 @@ class _ShopScreenState extends State<ShopScreen> with SingleTickerProviderStateM
 
       body: Column(
         children: [
-          customAppBar(screenHeight, screenWidth, _scaffoldKey),
-          PageHeadingWidget("Vegetable Seed Outlets",Icons.shop, screenHeight, screenWidth),
+          customAppBar(size.height, size.width, _scaffoldKey),
+          PageHeadingWidget("Vegetable Seed Outlets",Icons.shop, size.height, size.width),
           Padding(
             padding: const EdgeInsets.all(5),
             child: Container(
 
-              height: screenHeight*0.176,
-              width: screenWidth * 0.27,
+              height: size.height*0.7,
+              width: size.width * 0.9,
 
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(screenWidth * 0.005),
+                  borderRadius: BorderRadius.circular(size.width * 0.005),
                   color: COLOR_WHITE
               ),
               child: Stack(
@@ -80,7 +78,7 @@ class _ShopScreenState extends State<ShopScreen> with SingleTickerProviderStateM
                       Center(
                         child: Container(
                           width: size.width*0.9,
-                          height: size.height*0.61,
+                          height: size.height*0.7,
                           child: Center(
                             child: isLoading?
                             Center(child: CircularProgressIndicator(color: COLOR_GREEN,)) :Container(

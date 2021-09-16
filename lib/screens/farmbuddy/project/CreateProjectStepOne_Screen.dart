@@ -59,11 +59,6 @@ class _CreatePlantingProjectStepOneState extends State<CreatePlantingProjectStep
   @override
   Widget build(BuildContext context) {
 
-
-    List cropList = [
-      "1",
-      "2"
-    ];
     final Size size = MediaQuery.of(context).size;
 
 

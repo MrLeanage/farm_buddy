@@ -54,8 +54,6 @@ class _ProjectScreenState extends State<ProjectScreen> with SingleTickerProvider
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
-    final double screenWidth = window.physicalSize.width;
-    final double screenHeight = window.physicalSize.height;
     return Scaffold(
       key: _scaffoldKey,
       drawer: SideBar(),
@@ -63,17 +61,17 @@ class _ProjectScreenState extends State<ProjectScreen> with SingleTickerProvider
 
       body: Column(
         children: [
-          customAppBar(screenHeight, screenWidth, _scaffoldKey),
-          PageHeadingWidget("MY FARMING PROJECTS",Icons.workspaces_filled, screenHeight, screenWidth),
+          customAppBar(size.height, size.width, _scaffoldKey),
+          PageHeadingWidget("MY FARMING PROJECTS",Icons.workspaces_filled, size.height, size.width),
           Padding(
             padding: const EdgeInsets.all(5),
             child: Container(
 
-              height: screenHeight*0.176,
-              width: screenWidth * 0.27,
+              height: size.height*0.68,
+              width: size.width * 0.9,
 
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(screenWidth * 0.005),
+                borderRadius: BorderRadius.circular(size.width * 0.05),
                 color: COLOR_WHITE
               ),
               child: Stack(
@@ -84,13 +82,13 @@ class _ProjectScreenState extends State<ProjectScreen> with SingleTickerProvider
                       Center(
                         child: Container(
                           width: size.width*0.9,
-                          height: size.height*0.61,
+                          height: size.height*0.68,
                           child: Center(
                             child: isLoading?
                             Center(child: CircularProgressIndicator(color: COLOR_GREEN)) :Container(
                               color: COLOR_WHITE,
                               width: size.width*0.9,
-                              height: size.height*0.65,
+                              height: size.height*0.8,
                               child: RefreshIndicator(
                                 onRefresh: () async {
                                   return fetchOnGoingProjects();

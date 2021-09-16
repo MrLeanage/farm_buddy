@@ -17,9 +17,11 @@ class Crop{
     _name =   json['name'];
     _imageURL =  json['imageURL'];
     _description =  json['description'];
+    _placeID = json['initialization']?['place']['id'];
+    _placeName = json['initialization']?['place']['name'];
     _lifeSpan =   json['lifeSpan'];
-    _cropNoteStatus =   json['cropNote']['noteStatus'];
-    _cropNoteMsg =   json['cropNote']['noteMessage'];
+    _cropNoteStatus =   json['cropNote']?['noteStatus'];
+    _cropNoteMsg =   json['cropNote']?['noteMessage'];
   }
 
   String get cropNoteMsg => _cropNoteMsg;

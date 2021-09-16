@@ -12,8 +12,8 @@ Widget PageHeadingWidget(String heading, IconData iconData, double screenHeight,
         Container(
           //height: screenHeight * 0.065,
           //width: screenWidth * 0.27,
-          height: screenHeight *0.025,
-          width: screenWidth * 0.27,
+          height: screenHeight *0.08,
+          width: screenWidth * 0.95,
           decoration: BoxDecoration(
               color: COLOR_WHITE,
               boxShadow: [
@@ -33,6 +33,7 @@ Widget PageHeadingWidget(String heading, IconData iconData, double screenHeight,
                 end: const FractionalOffset(1.0, 0.0),
                 stops: [0.0, 1.0],
                 tileMode: TileMode.clamp),
+            borderRadius: BorderRadius.circular(screenWidth *0.1/6),
           ),
           child: Center(
             child: Column(
@@ -41,7 +42,10 @@ Widget PageHeadingWidget(String heading, IconData iconData, double screenHeight,
                 Row(
                   children: <Widget>[
                     addHorizontalSpace(screenWidth * 0.01),
-                    Icon(iconData, color: COLOR_WHITE),
+                    Container(child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Icon(iconData, color: COLOR_WHITE),
+                    )),
                     addHorizontalSpace(screenWidth * 0.01),
                     Text(heading, style: TextStyle(
                         color: COLOR_WHITE,

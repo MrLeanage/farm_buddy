@@ -1,4 +1,4 @@
-
+// @dart=2.9
 import 'package:farm_buddy/utils/constants.dart';
 import 'snackBar_widget.dart';
 import 'package:flutter/cupertino.dart';

@@ -7,7 +7,7 @@ import 'addSpace_widget.dart';
 
 Widget customAppBar(double screenHeight, double screenWidth, GlobalKey<ScaffoldState> _scaffoldKey){
   return Container(
-    height: screenHeight * 0.045,
+    height: screenHeight * 0.12,
     width: screenWidth,
     decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
@@ -24,26 +24,25 @@ Widget customAppBar(double screenHeight, double screenWidth, GlobalKey<ScaffoldS
           ),
         ]
     ),
-    child: Padding(
-      padding: const EdgeInsets.all(8.0),
+    child: Container(
       child: Row(
         children: <Widget>[
 
-          IconButton(
-            onPressed: () => _scaffoldKey.currentState!.openDrawer(),
-            icon: Icon(Icons.menu),
-            color: COLOR_GREEN,
+          Container(
+            child: IconButton(
+              onPressed: () => _scaffoldKey.currentState!.openDrawer(),
+              icon: Icon(Icons.menu, size: 50,),
+              color: COLOR_GREEN,
+            ),
           ),
 
 
           Image.asset(
             'assets/logo-cover.png',
-            width: screenWidth * 0.2,
+            width: screenWidth * 0.7,
           )
         ],
       ),
-    ),
-    padding: EdgeInsets.only(left: 15.0, right: 15.0),
-
+      ),
   );
 }

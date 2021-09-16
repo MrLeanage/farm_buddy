@@ -16,8 +16,7 @@ class _EncyclopaediaState extends State<Encyclopaedia> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
-    final double screenWidth = window.physicalSize.width;
-    final double screenHeight = window.physicalSize.height;
+    final Size size = MediaQuery.of(context).size;
     return Scaffold(
       key: _scaffoldKey,
       drawer: SideBar(),
@@ -25,8 +24,8 @@ class _EncyclopaediaState extends State<Encyclopaedia> {
 
       body: Column(
         children: [
-          customAppBar(screenHeight, screenWidth, _scaffoldKey),
-          PageHeadingWidget("ENCYCLOPAEDIA",Icons.eco, screenHeight, screenWidth),
+          customAppBar(size.height, size.width, _scaffoldKey),
+          PageHeadingWidget("ENCYCLOPEDIA", Icons.eco, size.height, size.width),
 
         ],
       ),
